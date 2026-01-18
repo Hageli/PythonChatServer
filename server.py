@@ -73,8 +73,8 @@ def receive():
         if(channel == '1'):
             c1_usernames.append(username)
             channel_1.append(client)
-            broadcast_channel_1(f'{username} joined the chat'.encode('utf-8'))
             client.send('Connected to channel 1'.encode('utf-8'))
+            broadcast_channel_1(f'{username} joined the chat'.encode('utf-8'))
         elif(channel == '2'):
             c2_usernames.append(username)
             channel_2.append(client)

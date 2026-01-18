@@ -38,7 +38,7 @@ def write():
         message = f'{name}: {input("")}'
         if(message[len(name)+2:].startswith('/msg ')):
             client.send(f'MSG {name} {message[len(name)+2+5:]}'.encode('utf-8'))
-        elif(message[len(name)+2:].startswith('/exit ')):
+        elif(message[len(name)+2:].startswith('/exit')):
             print("Exiting server")
             client.close()
             break
